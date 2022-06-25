@@ -47,11 +47,14 @@ function App () {
 		}, 1000);
 	}
 
-	// Runs the setClock() function anytime the window loads
+	// Runs the setClock() function anytime the window loads and reloads thepage once
 	window.onload = function () {
 		setClock();
+    if(!window.location.hash) {
+      window.location = window.location + '#loaded';
+      window.location.reload();
+    }
 	}
-
 
 	return (
 		<div className='App'>
