@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import './App.css';
 
 function App () {
-	const [seconds, setSeconds] = useState('');
-	const [minutes, setMinutes] = useState('');
-	const [hours, setHours] = useState('');
-	const [day, setDay] = useState('');
-	const [month, setMonth] = useState('');
-	const [year, setYear] = useState('');
+  const date = new Date();
+	const [seconds, setSeconds] = useState(date.getSeconds());
+	const [minutes, setMinutes] = useState(date.getMinutes());
+	const [hours, setHours] = useState(date.getHours());
+	const [day, setDay] = useState(date.getHours());
+	const [month, setMonth] = useState(date.getDate());
+	const [year, setYear] = useState(date.getFullYear());
 
 	// Updates the time state
 	const updateClock = () => {
