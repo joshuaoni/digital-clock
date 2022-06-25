@@ -3,16 +3,18 @@ import './App.css';
 
 function App () {
   const date = new Date();
+  const mth = date.getMonth() + 1;
 	const [seconds, setSeconds] = useState(date.getSeconds());
 	const [minutes, setMinutes] = useState(date.getMinutes());
 	const [hours, setHours] = useState(date.getHours());
 	const [day, setDay] = useState(date.getDate());
-	const [month, setMonth] = useState(date.getMonth() + 1);
+	const [month, setMonth] = useState(date.getMonth());
 	const [year, setYear] = useState(date.getFullYear());
 
 	// Updates the time state
 	const updateClock = () => {
 		const now = new Date();
+    const mth = now.getMonth() + 1;
 		if (now.getSeconds().toString().length === 1) {
 			setSeconds('0' + now.getSeconds());
 		} else {
@@ -33,7 +35,7 @@ function App () {
 		} else{
 			setDay(now.getDate());
 		} if (now.getMonth().toString().length === 1) {
-			setMonth('0' + now.getMonth() + 1);
+			setMonth('0' + mth);
 		} else {
 			setMonth(now.getMonth());
 		}
