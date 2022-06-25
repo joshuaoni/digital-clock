@@ -6,8 +6,8 @@ function App () {
 	const [seconds, setSeconds] = useState(date.getSeconds());
 	const [minutes, setMinutes] = useState(date.getMinutes());
 	const [hours, setHours] = useState(date.getHours());
-	const [day, setDay] = useState(date.getHours());
-	const [month, setMonth] = useState(date.getDate());
+	const [day, setDay] = useState(date.getDate());
+	const [month, setMonth] = useState(date.getMonth() + 1);
 	const [year, setYear] = useState(date.getFullYear());
 
 	// Updates the time state
@@ -33,7 +33,7 @@ function App () {
 		} else{
 			setDay(now.getDate());
 		} if (now.getMonth().toString().length === 1) {
-			setMonth('0' + now.getMonth());
+			setMonth('0' + now.getMonth() + 1);
 		} else {
 			setMonth(now.getMonth());
 		}
