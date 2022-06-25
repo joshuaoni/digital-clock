@@ -2,7 +2,8 @@
 
 .App {
     font-family: 'Quicksand', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
     width: 100%;
     background: black;
     color: #ffe600;
@@ -13,16 +14,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
+    min-height: 90vh;
+    height: max-content;
     width: 100%;
 }
 
 .title {
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
 }
 
 h3 {
