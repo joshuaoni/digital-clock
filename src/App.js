@@ -8,7 +8,7 @@ function App () {
 	const [minutes, setMinutes] = useState(date.getMinutes());
 	const [hours, setHours] = useState(date.getHours());
 	const [day, setDay] = useState(date.getDate());
-	const [month, setMonth] = useState(date.getMonth());
+	const [month, setMonth] = useState(mth);
 	const [year, setYear] = useState(date.getFullYear());
 
 	// Updates the time state
